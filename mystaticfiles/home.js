@@ -1,7 +1,7 @@
 var logo = document.querySelector("#logo");
 
 function goHome() {
-    window.location.href = "https://mysite-6wfd.onrender.com/";
+    window.location.href = "https://mysite-xqn6.onrender.com/";
 }
 
 // Mobile nav ------------------------------------------------------------------------------------------
