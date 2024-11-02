@@ -1,0 +1,154 @@
+{% extends 'mayne/base.html'%}
+
+{% load static %}
+
+{% block title %}Fedex | Home{% endblock %}
+
+{% block content %}
+    <section class="landing">
+        <h1>Ship, manage, track, deliver</h1>
+        <div class="landing-nav">
+            <div>
+                <i class="fa-solid fa-calculator"></i>
+                <span>RATE & SHIP</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>TRACK</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>LOCATIONS</span>
+            </div>
+        </div>
+
+        <form method="GET" action="" class="track-input">
+            <input placeholder="TRACKING ID" type="text" name="user_tracking_number" value="">
+            <button type="submit" >TRACK</button>
+        </form>
+
+        <div class="track-input-after">
+            <a href="/under_construction">MULTIPLE TRACKING NUMBERS&nbsp; |</a>
+            <a href="/under_construction">&nbsp; NEED HELP?</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div>
+            <img src="{% static 'img/icon_courier.png' %}" alt="">
+            <a href="/under_construction">DROP OFF A PACKAGE</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/icon_delivery.png' %}" alt="">
+            <a href="/under_construction">REDIRECT A PACKAGE</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/icon_house.png' %}" alt="">
+            <a href="/under_construction">STORE HOURS AND SERVICES</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/icon_alert.png' %}" alt="">
+            <a href="/under_construction">SERVICE ALERTS</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/icon_returns.png' %}" alt="">
+            <a href="/under_construction">RETURN A PACKAGE</a>
+        </div>
+    </section>
+
+    <section class="content-block1">
+        <div>
+            <h4>One rate fits all</h4>
+            <p>FedEx can ship your holiday packages for less than the Post Office. Two-day retail shipping, one flat rate.
+                FedEx One Rate.*</p>
+            <a href="/under_construction">START SHIPPING WITH FEDEX ONE RATE</a>
+            <span>*Effective 10/6/24-1/19/25</span>
+        </div>
+        <img src="{% static 'img/F1R-Content-Block.jpg' %}" alt="">
+    </section>
+
+    <section class="header-block1">
+        <h2>The holidays are almost here. <br>Deliver more happy with fast, reliable shipping.</h2>
+    </section>
+
+    <section class="blog-block1">
+        <div>
+            <img src="{% static 'img/POD_EnjoyMore.jpg' %}" alt="">
+            <h4>Enjoy more visibility from pickup to delivery</h4>
+            <p>Track a package on the map. And get picture proof of delivery or attempted delivery. Plus, recipients can receive their driver’s name and photo with eligible shipments.</p>
+            <a href="/under_construction">TRACK AND SEE</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/MK-FedEx-Canada.jpg' %}" alt="">
+            <h4>Reach farther, faster—with FedEx Ground®</h4>
+            <p>Need to reach rural customers fast? FedEx Ground is faster to more locations than UPS Ground and delivers to more ZIP codes. <a href="/under_construction">Learn more ways</a> FedEx helps.</p>
+            <a href="/under_construction">SHIP NOW WITH GROUND</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/FY-22_leavenworth.jpg' %}" alt="">
+            <h4>Get holiday-ready with these resources</h4>
+            <p>Prep for the hustle and bustle now by exploring visibility tools, service alert options, and more. And don’t forget to bookmark <a href="/under_construction">our last-days-to-ship schedule.</a></p>
+            <a href="/under_construction">ACCESS HOLIDAY RESOURCES</a>
+        </div>
+    </section>
+
+    <section class="blog-block2">
+        <div class="blog-block2-container">
+            <img src="{% static 'img/MK-FEDEX-KANGA-3020.jpg' %}" alt="">
+            <div>
+                <h4>Set your business up for big rewards</h4>
+                <p>The holiday season means more online shopping—and shipping. Make sure you stack up the perks by signing up for FedEx Rewards now. It’s free!** </p>
+                <a href="/under_construction">JOIN REWARDS</a>
+            </div>
+        </div>
+
+        <div class="blog-block2-container">
+            <img src="{% static 'img/POD_HeadIntoHolidays.jpg' %}" alt="">
+            <div>
+                <h4>Head into the holidays—and international markets</h4>
+                <p>Peak season is an exciting time to share your brand with the world. See how our rates can fit your budget. And <a href="/under_construction"> use our international tools and resources</a> to get started.</p>
+                <a href="/under_construction">GET A RATE</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="header-block1">
+        <h2>The more you know, the smarter you ship.</h2>
+    </section>
+
+    <section class="blog-block1">
+        <div>
+            <img src="{% static 'img/PN-FEDEX-31612.jpg' %}" alt="">
+            <h4>Protect your FedEx account with 2-step verification</h4>
+            <p>This Cybersecurity Awareness Month, take some time to review our safety tips and reminders. Then add an extra layer of security to guard against hackers.</p>
+            <a href="/under_construction">BE CYBER AWARE</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/POD_StayInControl.jpg' %}" alt="">
+            <h4>Stay in control with real-time delivery notifications</h4>
+            <p>Download the FedEx® Mobile app to receive delivery notifications. And sign up for <a href="/under_construction">FedEx Delivery Manager®</a> so you can give specific delivery instructions.</p>
+            <a href="/under_construction">DOWNLOAD THE APP</a>
+        </div>
+
+        <div>
+            <img src="{% static 'img/b_master_integer_3341_2032264.jpg' %}" alt="">
+            <h4>Get expert tips for packing gifts correctly</h4>
+            <p>You put a lot of thought into purchasing gifts for loved ones. Do the same when it comes to shipping them. Use our tips and how-to guides to help you pack.</p>
+            <a href="/under_construction">REVIEW HOW-TO GUIDES</a>
+        </div>
+    </section>
+
+    <section class="money-back">
+        <h4>FedEx money-back guarantee</h4>
+        <p>We offer a money-back guarantee for select services. This guarantee may be suspended, modified, or revoked. Please check money-back guarantee for the latest status of our money-back guarantee.</p>
+        <p>**For details, please see <a href="/under_construction">FedEx Rewards Terms and Conditions</a> and the <a href="/under_construction">Program Agreement</a>.</p>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'mayne/create.html' %}
+
+{% load static %}
+
+{% block title %}Edit Delivery{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<div class="app-content-header">
+    <h2 class="app-content-headerText">Edit Delivery</h2>
+</div>
+<form method="post" style="color: white;">
+    {% csrf_token %}
+    {{ edit_delivery_form.as_p }}
+    <button type="submit" name="save">Save Changes</button>
+    <button type="reset">Reset</button>
+</form>
+
+
+{% endblock %}

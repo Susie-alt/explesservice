@@ -1,0 +1,65 @@
+{% extends 'mayne/base.html' %}
+
+{% load static %}
+
+{% block title %}Delivery Status{% endblock %}
+
+{% block content %}
+<div class="contaner">
+    <h3>Tracking number: {{de.tracking_number}}</h3>
+    <p>Sender: <em>{{de.sender}}</em></p>
+    <p>Receiver: <em>{{de.receiver}}</em></p>
+
+    <div class="sub-contaner">
+        {% if de.order_status == True %}
+        <div class="order-tracking completed">
+            <span class="is-complete"></span>
+        {% else %}
+        <div class="order-tracking">
+            <span class="is-complete"></span>
+        {% endif %}
+            <p>Ordered<br><span>{{de.origin}}</span><br><span>{{de.order_date}}</span></p>
+        </div>
+        {% if de.shipment_status == True %}
+        <div class="order-tracking completed">
+            <span class="is-complete"></span>
+        {% else %}
+        <div class="order-tracking">
+            <span class="is-complete"></span>
+        {% endif %}
+            <p>Shipped<br><span>{{de.shipment_location}}</span><br><span>{{de.shipment_date}}</span></p>
+        </div>
+        {% if de.delivery_status == True %}
+        <div class="order-tracking completed">
+            <span class="is-complete"></span>
+        </div>
+        {% else %}
+        <div class="order-tracking">
+            <span class="is-complete"></span>
+        {% endif %}
+            <p>Delivered<br><span>{{de.delivery_destination}}</span><br><span>{{de.delivery_date}}</span></p>
+        </div>
+    </div>
+
+    <div class="sub-contaner-remark">
+        {% if de.order_status == True and de.shipment_status == False and de.delivery_status == False %}
+            <div class="remark">
+                <h4 class="remark-h4">ORDERED</h4>
+                <p class="remark-p"> Located at FedEx drop-point {{de.origin}} </p>
+            </div>
+        {% elif de.order_status == True and de.shipment_status == True and de.delivery_status == False %}
+            <div class="remark">
+                <h4 class="remark-h4">IN TRANSIT</h4>
+                <p class="remark-p"> Departed FedEx location, {{de.origin}} and presently at {{de.shipment_location}}.</p>
+            </div>
+        {% elif de.order_status == True and de.shipment_status == True and de.delivery_status == True %}
+            <div class="remark">
+                <h4 class="remark-h4">DELIVERED</h4>
+                <p class="remark-p"> Arrived at delivery location, {{de.delivery_destination}} and ready for pickup!</p>
+            </div>
+        {% endif %}
+        <a href="{% url 'get_updates' id=de.id %}">GET STATUS UPDATES</a>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'style3.css' %}">
+    <title>{% block title %}Fedex{% endblock %}</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <img onclick="goHome()" id="logo" src="{% static 'logo.png' %}" alt="">
+            <div class="bottom_navbar">
+                <div class="bottom_dropdown">
+                    <button class="bottom_dropbtn">Shipping <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="bottom_dropdown-content">
+                        <a href="/under_construction">Create Shipment</a>
+                        <a href="/under_construction">Shipment Rates and Delivery Times</a>
+                        <a href="/under_construction">Schedule & Manage Pickups</a>
+                        <a href="/under_construction">Packing & Shipping Supplies</a>
+                        <a href="/under_construction">International Shipping Guide</a>
+                        <a href="/under_construction">Freight</a>
+                        <a href="/under_construction">Manage a Return</a>
+                    </div>
+                </div>
+
+                <div class="bottom_dropdown">
+                    <button class="bottom_dropbtn">Tracking <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="bottom_dropdown-content">
+                        <a href="/under_construction">Track</a>
+                        <a href="/under_construction">Advanced Shipment Tracking</a>
+                        <a href="/under_construction">Manage Your Delivery</a>
+                    </div>
+                </div>
+
+
+                <div class="bottom_dropdown">
+                    <button class="bottom_dropbtn">Design & Print <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="bottom_dropdown-content">
+                        <a href="/under_construction">Explore Print, Products & Design</a>
+                        <a href="/under_construction">Browse Services</a>
+                    </div>
+                </div>
+
+                <div class="bottom_dropdown">
+                    <button class="bottom_dropbtn">Locations <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="bottom_dropdown-content">
+                        <a href="/under_construction">Drop Off A Package</a>
+                    </div>
+                </div>
+
+                <div class="bottom_dropdown">
+                    <button class="bottom_dropbtn">Support <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="bottom_dropdown-content">
+                        <a href="/under_construction">Small Business Center</a>
+                        <a href="/under_construction">FedEx Service Guide</a>
+                        <a href="/under_construction">Account Management Tools</a>
+                        <a href="/under_construction">Frequently Asked Questions</a>
+                        <a href="/under_construction">File A Claim</a>
+                        <a href="/under_construction">Billing and Invoicing</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="sign-in">
+                    <a href="/under_construction" id="sign-in-text" class="sign-in-text">Sign Up or Log In</a>
+                    <i id="user-icon" class="fa-regular fa-circle-user"></i>
+                </div>
+                <a href="/under_construction"><i id="search-icon" class="fa-solid fa-magnifying-glass"></i></a>
+                <i id="ham" class="fas fa-bars" onclick="show()"></i>
+                <i id="close" class="fas fa-times" onclick="hide()"></i>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <section class="footer">
+        <div class="footer-container">
+            <div class="foot-links">
+                <ul>
+                    <li>OUR COMPANY</li>
+                    <li><a href="/under_construction">About FedEx</a></li>
+                    <li><a href="/under_construction">Our Portfolio</a></li>
+                    <li><a href="/under_construction">Investor Relations</a></li>
+                    <li><a href="/under_construction">Careers</a></li>
+                </ul>
+
+                <ul>
+                    <br>
+                    <br>
+                    <li><a href="/under_construction">FedEx Blog</a></li>
+                    <li><a href="/under_construction">Corporate Responsibility</a></li>
+                    <li><a href="/under_construction">Newsroom</a></li>
+                    <li><a href="/under_construction">Contact Us</a></li>
+                </ul>
+
+                <ul>
+                    <br>
+                    <li>MORE FROM FEDEX</li>
+                    <li><a href="/under_construction">FedEx Compatible</a></li>
+                    <li><a href="/under_construction">FedEx Developer Portal</a></li>
+                    <li><a href="/under_construction">FedEx Logistics</a></li>
+                    <li><a href="/under_construction">ShopRunner</a></li>
+                </ul>
+            </div>
+
+            <div class="foot-lang">
+                <ul>
+                    <li>LANGUAGE</li>
+                    <li><i></i>United States</li>
+                    <div class="bottom_dropdown">
+                        <button class="bottom_dropbtn">English<i class="fa-solid fa-caret-down"></i></button>
+                        <div class="bottom_dropdown-content">
+                            <a href="/under_construction">English</a>
+                            <a href="/under_construction">Español</a>
+                        </div>
+                    </div>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="social-media">
+            <span>FOLLOW FEDEX</span>
+            <div class="social-icons">
+                <div><i class="fa-regular fa-envelope"></i></div>
+                <div><i class="fa-brands fa-facebook-f"></i></div>
+                <div><i class="fa-brands fa-x-twitter"></i></div>
+                <div><i class="fa-brands fa-instagram"></i></div>
+                <div><i class="fa-brands fa-linkedin-in"></i></div>
+                <div><i class="fa-brands fa-youtube"></i></div>
+                <div><i class="fa-brands fa-pinterest-p"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-section">
+            <div>
+                <span>© FedEx 1995-2024</span>
+            </div>
+
+            <div>
+                <a href="/under_construction">Site Map</a>|<a href="/under_construction">Terms of Use</a>|<a href="/under_construction">Privacy & Security</a>|<a href="/under_construction">Ad Choices</a>
+            </div>
+        </div>
+    </footer>
+
+    {% if messages %}
+        {% for message in messages %}
+            {% if "no_record" in message.tags %}
+                <div class="popup">
+                    <span class="popuptext" id="myPopup1">&#128683 <br><br> {{ message }}</span>
+                </div>
+                <script>
+                    setTimeout(timeUp, 4000);
+                    function timeUp() {
+                    var popup = document.getElementById("myPopup1");
+                    popup.classList.toggle("fade");
+                    popup.classList.toggle("hide");
+                    }
+                </script>
+            {% elif "under_construction" in message.tags %}
+                <div class="popup">
+                    <span class="popuptext" id="myPopup2"> Oops!<br> &#128679 <br> {{ message }}</span>
+                </div>
+                <script>
+                    setTimeout(timeUp, 4000);
+                    function timeUp() {
+                    var popup = document.getElementById("myPopup2");
+                    popup.classList.toggle("fade");
+                    popup.classList.toggle("hide");
+                    }
+                </script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    <script src="{% static 'home.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>
