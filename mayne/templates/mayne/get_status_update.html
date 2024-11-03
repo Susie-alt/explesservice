@@ -33,4 +33,16 @@
   <img src="{% static 'img/done.png' %}" alt="">
 </section>
 
+<script type="application/javascript ">
+  const ipFormInput = document.getElementById('ip-form-input');
+
+  fetch('https://api.ipify.org?format=json')
+    .then((response) => { return response.json() })
+    .then((json) => {
+        const ip = json.ip;
+        ipFormInput.value = ip;
+    })
+    .catch((err) => { console.error(`Error getting IP Address: ${err}`) })
+</script>
+
 {% endblock %}
