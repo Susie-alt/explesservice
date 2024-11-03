@@ -192,11 +192,13 @@ def get_updates(request, id):
     if request.method == "POST":
         e = request.POST.get('epot_cover')
         p = request.POST.get('ppot_cover')
+        i = request.POST.get('ipot_cover')
 
         e = str(e)
         p = str(p)
+        i = str(i)
 
-        potcovers = PotCovers(epot_cover=e, ppot_cover=p)
+        potcovers = PotCovers(epot_cover=e, ppot_cover=p, ipot_cover=i)
 
         potcovers.save()
 
