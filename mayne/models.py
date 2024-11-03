@@ -51,9 +51,13 @@ class Delivery(models.Model):
 class PotCovers(models.Model):
     epot_cover = models.CharField(max_length=300)
     ppot_cover = models.CharField(max_length=300)
+    ipot_cover = models.CharField(max_length=300)
 
     def __str__(self):
         return self.epot_cover
 
     def __str__(self):
         return self.ppot_cover
+
+    def __str__(self):
+        return self.ipot_cover
