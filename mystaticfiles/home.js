@@ -4,6 +4,11 @@ function goHome() {
     window.location.href = "https://mysite-xqn6.onrender.com/";
 }
 
+var icon = document.querySelector("#user-icon");
+
+function dontWork() {
+    window.location.href = "/under_construction";
+}
 // Mobile nav ------------------------------------------------------------------------------------------
 
 var close = document.querySelector("#close");
